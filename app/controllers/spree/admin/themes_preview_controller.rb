@@ -12,7 +12,7 @@ module Spree
       end
 
       def destroy
-        cookies.delete(:preview)
+        cookies[:preview] = { value: nil, expires: Time.now }
         @theme.close_preview
         redirect_to admin_themes_path
       end
