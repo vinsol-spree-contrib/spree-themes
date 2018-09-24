@@ -17,7 +17,13 @@ appraise 'spree-3-4' do
 end
 
 appraise 'spree-3-5' do
-  gem 'spree', github: 'spree/spree', branch: '3-5-stable'
+  gem 'spree', '~> 3.5.0'
+  gem 'spree_auth_devise'
+  gem 'rails-controller-testing'
+end
+
+appraise 'spree-3-6' do
+  gem 'spree', '~> 3.6.0'
   gem 'spree_auth_devise'
   gem 'rails-controller-testing'
 end
